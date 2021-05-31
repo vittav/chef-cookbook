@@ -27,7 +27,7 @@ export class RecipeService {
     }
     
     // Obtem uma receita  pelo id
-    getRecipeById(id: number): Observable<Recipe> {
+    getRecipe(id: number): Observable<Recipe> {
       return this.httpClient.get<Recipe>(this.url + '/' + id)
       .pipe(
         retry(2),

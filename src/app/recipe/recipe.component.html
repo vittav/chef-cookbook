@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card list-recipe">
+        <h5 class="card-header">Receita de {{recipeData.data[0].name}}</h5>
+        <div class="card-body">
+            Description: {{recipeData.data[0].description}}
+            <li>Duration: {{recipeData.data[0].duration}}</li>
+            <li>Ingredientes:</li>
+            <ul *ngFor="let ingredient of recipeData.data[0].ingredients">
+                {{ingredient.name}}<br>
+            </ul>
+            <li>Passo a Passo:</li>
+            <ul *ngFor="let step of recipeData.data[0].steps">
+                {{step.number}} : {{step.description}}<br>
+            </ul>
+        </div>
+    </div>
+</div>
