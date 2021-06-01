@@ -1,0 +1,45 @@
+.bg-login {
+    background-image: url("../../assets/img-bg-login.jpg");
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    /* padding: 24rem 0; */
+    padding: 14rem 0;
+}
+
+.button-access {
+    color: #fff;
+    background-color: #f26d07;
+    border-color: #f26d07;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.form-control {
+    padding-left: 40px;
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.input-user-placeholder {
+    position: relative;
+}
+
+.user-placeholder {
+    position: absolute;
+    top: 200px;
+    left: 17px;
+}
+
+.input-key {
+    position: relative;
+}
+
+.key {
+    position: absolute;
+    top: 255px;
+    left: 17px;
+}
