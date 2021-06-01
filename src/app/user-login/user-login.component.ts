@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -21,6 +20,9 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.isUserLogin();
+    if (this.isLogin) {
+      this.router.navigate(['recipes'])
+    }
   }
 
   onSubmit(form: { value: { email: string; password: string; }; }) {
