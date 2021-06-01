@@ -1,17 +1,1 @@
-<nav class="navbar navbar-expand-lg bg-dark justify-content-between align-items-center coco-navbar pt-0 pb-0" *ngIf='loggedIn'>
-    <div class="container mt-0">
-        <img src="../assets/logo-coco-bambu-mini.png" alt="" class="logo">
-        <input ng-model="search.recipes" placeholder="Buscar receita" class="search-form">
-        <ul class="navbar-nav">
-            <li class="nav-item" *ngIf='loggedIn'>
-                <a class="nav-link" (click)='logout()' routerLinkActive="active">
-                    <div class="d-flex flex-column align-items-center justify-content-center">
-                        <img src="../assets/icon-login.png" alt="" class="logout-button">
-                        <p class="">Sair</p>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
 <router-outlet></router-outlet>

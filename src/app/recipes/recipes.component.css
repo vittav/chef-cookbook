@@ -1,3 +1,25 @@
+.coco-navbar {
+    height: 80px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.logo {
+    height: 30px;
+}
+
+.logout-button {
+    height: 30px;
+    width: 30px;
+}
+
+.search-form {
+    width: 65%;
+    margin-bottom: 10px;
+}
+
+
 .bg-grey {
     background-color: #f7f5f2;
 }
