@@ -24,9 +24,8 @@ export class RecipeComponent implements OnInit {
   }
 
   getRecipe() {
-    return this.recipeService.getRecipe(this.id).subscribe((data: {}) => {
+    return this.recipeService.getRecipe(this.id).subscribe((data) => {
       this.recipeData = data;
-      console.log(this.recipeData.data[0].steps);
     });
   }
 }

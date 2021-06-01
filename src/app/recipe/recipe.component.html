@@ -1,15 +1,18 @@
 <div class="container">
     <div class="card list-recipe">
-        <h5 class="card-header">Receita de {{recipeData.data[0].name}}</h5>
+        <div class="d-flex justify-content-between card-header">
+            <h5 class="">Receita de {{recipeData.data?.name}}</h5>
+            <h5><a routerLink="/recipes">Back</a></h5>
+        </div>
         <div class="card-body">
-            Description: {{recipeData.data[0].description}}
-            <li>Duration: {{recipeData.data[0].duration}}</li>
+            Description: {{recipeData.data?.description}}
+            <li>Duration: {{recipeData.data?.duration}}</li>
             <li>Ingredientes:</li>
-            <ul *ngFor="let ingredient of recipeData.data[0].ingredients">
+            <ul *ngFor="let ingredient of recipeData.data?.ingredients">
                 {{ingredient.name}}<br>
             </ul>
             <li>Passo a Passo:</li>
-            <ul *ngFor="let step of recipeData.data[0].steps">
+            <ul *ngFor="let step of recipeData.data?.steps">
                 {{step.number}} : {{step.description}}<br>
             </ul>
         </div>
