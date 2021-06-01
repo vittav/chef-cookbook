@@ -7,15 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeComponent } from './recipe/recipe.component';
-// import { RecipesComponent } from './recipes/recipes.component';
-// import { RecipeComponent } from './recipe/recipe.component';
-// import { UserLoginComponent } from './user-login/user-login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipesComponent,
-    RecipeComponent
+    RecipeComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
