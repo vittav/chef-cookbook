@@ -1,30 +1,21 @@
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Gerenciamento de Receitas</li>
-    </ol>
-</nav>
-<div class="container">
-    <div class="card list-recipe">
-        <h5 class="card-header">Lista de Receitas</h5>
-        <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let recipe of Recipe.data">
-                        <a [routerLink]="['/recipes', recipe._id]">
-                            <td>{{recipe.name}}</td>
-                        </a>
-                            <td>{{recipe.description}}</td>
-                            <td>{{recipe.duration}}</td>
-                    </tr>
-                </tbody>
-            </table>
+<div class="bg-grey">
+    <div class="container pb-5">
+        <h5 class="cards-header">Últimos pedidos</h5>
+        <div class="cards" *ngFor="let recipe of Recipe.data">
+            <div class="card bg-grey">
+                <img class="card-img" src="../../../../assets/prato-{{recipe.name.split(' ')[0] | lowercase}}-peq.jpg" alt="">
+                <div class="card-body">
+                    <h5>{{recipe.name.split(' ')[0]}}</h5>
+                    <p>{{recipe.description}}</p>
+                </div>
+                <div class="card-duration">
+                    <p>{{recipe.duration}}</p>
+                </div>
+                <a [routerLink]="['/recipes', recipe._id]" class="card-link">
+                    <p>Ver</p>
+                    <p>Receita</p>
+                </a>
+            </div>
         </div>
     </div>
 </div>
