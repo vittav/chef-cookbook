@@ -2,7 +2,7 @@
 
 Este é o app referente ao cliente, ele só funciona corretamente consumindo informações do servidor.
 
-`Desta forma, recomendo que a análise seja iniciada por https://github.com/vittav/chef-cookbook`
+`Desta forma, recomendo que a análise seja iniciada por https://github.com/vittav/chef-cookbook-api`
 
 ## Preparation
 
