@@ -100,8 +100,8 @@ footer {
 
 .button-prepare {
     color: #fff;
-    background-color: #f26d07;
-    border-color: #f26d07;
+    background-color: rgb(51, 80, 7);
+    border-color: rgb(51, 80, 7);
     border-radius: 1px;
     margin: 12px 8px;
 }
@@ -109,5 +109,9 @@ footer {
 .recipe-prepare-time .duration {
     margin-left: 10px;
     font-weight: 600;
+}
+
+.link-back {
+    text-shadow: 1px 1px black;
 }
 

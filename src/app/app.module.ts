@@ -7,8 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
-import { CommonModule } from '@angular/common';
 import { RecipeComponent } from './recipe/recipe.component';
 
 

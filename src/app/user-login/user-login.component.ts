@@ -38,7 +38,7 @@ export class UserLoginComponent implements OnInit {
       } else {
         console.log(res);
 
-        alert(res.msg)
+        alert("Erro no Login. Por favor, tente novamente")
       }
     }, err => {
       this.errorMessage = err['error'].message;
