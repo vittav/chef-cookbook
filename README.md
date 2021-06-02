@@ -28,7 +28,7 @@ Este é o app referente ao cliente, ele só funciona corretamente consumindo inf
 
 - Ao acessar, você deve ser direcionado para a página de login. O login é realizado com um POST request para o servidor, que responderá se o login foi ou não bem sucedido. Caso positivo, seus dados são salvos no local storage do chrome e você vai à página dos últimos pedidos.
 
-- Na página dos últimos pedidos você pode ver a recita ou realizar um logout, o que te redireciona para a página de login;
+- Na página dos últimos pedidos você pode ver a recita ou realizar um logout, o que te redireciona para a página de login. **A feature de busca não foi implementada, então o campo de busca neste momento serve apenas como composição da UI.**
 
 - Ao clicar em "Ver Receita" você é direcionado para a página de detalhes do produto. Lá você só poderá confirmar que finalizou quando todos os ingredientes forem adicionados e os passos realizados.
 
