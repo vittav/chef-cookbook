@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, TemplateRef } from '@angular/core';
 import { RecipeService } from '../services/recipe.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'app-recipe',
@@ -9,14 +10,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RecipeComponent implements OnInit {
   id = this.actRoute.snapshot.params['id'];
+  @Output() btnClick = new EventEmitter();
 
   recipeData: any = {};
   title = 'client-side-solution';
+  active: boolean = true;
+
 
   constructor(
     public actRoute: ActivatedRoute,
     public router: Router,
-    private recipeService: RecipeService
+    private recipeService: RecipeService,
   ) { }
 
   ngOnInit() {
@@ -28,4 +32,24 @@ export class RecipeComponent implements OnInit {
       this.recipeData = data;
     });
   }
+
+  finish() {
+    this.router.navigate(['/recipes']);
+    alert("Muito obrigado! Prato finalizado com sucesso.")
+  }
+
+  check($event: any) {
+    $event.target.classList.toggle('done');
+    const buttons = document.querySelectorAll('.checkbox');
+    const buttonsQuantity = buttons.length;
+    const checksQuantity = document.querySelectorAll('.done').length;
+    if (buttonsQuantity === checksQuantity){
+      this.active = false;
+    } else {
+      this.active = true;
+    }
+  }
 }
+
+
+

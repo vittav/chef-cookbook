@@ -1,0 +1,113 @@
+.banner {
+    min-height: 400px;
+    max-height: 800px;
+    max-width: 768px;
+    position: relative;
+    background-color: black;
+}
+
+.banner > img {
+    height: 100%;
+    max-width: 800px;
+    min-width: 400px;
+    background-position: center;
+    background-size: cover;
+    overflow-y: auto;
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.recipe-container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.recipe-banner-text {
+    color: white;
+    text-shadow: 1px 1px black;
+    margin: 0 30px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.recipe-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.recipe-navbar img {
+    height: 30px;
+    width: 30px;
+}
+
+.recipe-prep-time {
+    height: 60px;
+    width: 200px;
+    background-color: #f7f5f2;
+
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.done {
+    background-image: url("/assets/icon-check.png");
+    background-color: rgb(51, 80, 7);
+    color: black;
+    background-position: center;
+    background-size: cover;
+}
+
+.checkbox {
+    height: 40px;
+    width: 40px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+.step-checkbox {
+    min-width: 40px;
+}
+
+.list-recipe h4{
+    font-weight: bolder;
+}
+
+.step-number {
+    font-weight: bolder;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+
+    background-color: #f7f5f2;
+}
+
+.button-prepare {
+    color: #fff;
+    background-color: #f26d07;
+    border-color: #f26d07;
+    border-radius: 1px;
+    margin: 12px 8px;
+}
+
+.recipe-prepare-time .duration {
+    margin-left: 10px;
+    font-weight: 600;
+}
+

@@ -1,20 +1,49 @@
-<div class="container">
-    <div class="card list-recipe">
-        <div class="d-flex justify-content-between card-header">
-            <h5 class="">Receita de {{recipeData.data?.name}}</h5>
-            <h5><a routerLink="/recipes">Back</a></h5>
+<div class="recipe-container">
+    <div class="banner">
+        <img src="../../../../assets/prato-{{recipeData.data?.name.split(' ')[0].toLowerCase()}}-grande.jpg" alt="">
+        <div class="recipe-navbar">
+            <div class="d-flex flex-direction-column align-items-start mt-2">
+                <a routerLink="/recipes" class="ml-2 mt-1 link-back">
+                    <img src="../../../../assets/icon-back.png" alt="">
+                    Voltar
+                </a>
+            </div>
+            <div class="recipe-prep-time">
+                <img src="../../../../assets/icon-time.png" alt="" class="ml-2 timer">
+                <div class="ml-3 mt-1 recipe-prepare-time">
+                    <p class="mb-0 mt-2">Tempo de preparo:</p>
+                    <p class="duration">{{recipeData.data?.duration}}</p>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-            Description: {{recipeData.data?.description}}
-            <li>Duration: {{recipeData.data?.duration}}</li>
-            <li>Ingredientes:</li>
-            <ul *ngFor="let ingredient of recipeData.data?.ingredients">
-                {{ingredient.name}}<br>
-            </ul>
-            <li>Passo a Passo:</li>
-            <ul *ngFor="let step of recipeData.data?.steps">
-                {{step.number}} : {{step.description}}<br>
-            </ul>
+        <div class="recipe-banner-text">
+            <h3 class="mb-3">{{recipeData.data?.name}}</h3>
+            <p class="mb-5">{{recipeData.data?.description}}</p>
         </div>
     </div>
+    <div class="card list-recipe card-header pl-5">
+        <h4 class="my-3 pb-3 ml-2">Ingredientes</h4>
+        <div *ngFor="let ingredient of recipeData.data?.ingredients">
+                <div class="d-flex ml-2 mb-3">
+                    <div class="checkbox" (click)='check($event)'></div>
+                    <p class="ml-3 mt-2">{{ingredient.name}}</p>
+                </div>
+        </div>
+    </div>
+    <div class="card-body list-recipe pl-5">
+        <h4 class="my-3 pb-3 ml-2">Modo de Preparo</h4>
+        <div *ngFor="let step of recipeData.data?.steps">
+            <div class="d-flex align-items-centerml-2 mb-3">
+                <div class="checkbox step-checkbox" (click)='check($event)'></div>
+                <div>
+                    <p class="ml-3 mt-2 mb-0 step-number">Passo {{step.number}}</p>
+                    <p class="ml-3 mt-2 step-description">{{step.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class='btn button-prepare' (click)="finish()" value="Acessar" id="prepareButton" [disabled]="active">Iniciar Preparação</button>
+    </footer>
 </div>
+
